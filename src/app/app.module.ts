@@ -8,10 +8,14 @@ import { ListModule } from './list/list.module';
 import { NgxsModule } from '@ngxs/store';
 import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin'
 import { ListState } from './models/list/list.redux';
+import { HeaderComponent } from './components/layouts/header/header.component';
+import { FooterComponent } from './components/layouts/footer/footer.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

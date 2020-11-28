@@ -1,0 +1,23 @@
+
+#header {
+  height: 96px;
+  display: flex;
+  align-items: center;
+}
+
+#header i {
+  font-size: 20px;
+  margin-right: 32px;
+}
+
+.container {
+  padding: 0 80px;
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    padding: 0 40px;
+  }
+}
