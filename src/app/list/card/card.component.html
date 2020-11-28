@@ -5,7 +5,7 @@
     <div class="card">
       <div class="img-section">
         <img src="{{ item.image }}" alt="">
-        <a onclick="upRating()"><i class="far fa-heart"></i></a>
+        <i (click)="upRating(item._id)" class="far fa-heart"></i>
       </div>
       <div class="text-section">
         <div class="text">

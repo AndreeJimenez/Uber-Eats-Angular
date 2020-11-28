@@ -5,19 +5,18 @@ import { ItemService } from 'src/app/services/item/item.service';
 import { Store, Select } from '@ngxs/store';
 import { Observable } from 'rxjs';
 import { ListState } from 'src/app/models/list/list.redux';
+import { GetRatingAction } from 'src/app/models/list/list.redux';
+import { async } from '@angular/core/testing';
 
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
-  styleUrls: ['./card.component.scss']
+  styleUrls: ['./card.component.scss'],
 })
 export class CardComponent implements OnInit {
   restaurants: IItem[];
 
-  constructor( 
-    private itemService: ItemService,
-    private store: Store
-  ) { }
+  constructor(private itemService: ItemService, private store: Store) {}
 
   @Input() data;
 
@@ -31,8 +30,9 @@ export class CardComponent implements OnInit {
     this.restaurants = items;
   }
 
-  
+  @Select(ListState.getRating) rating$: number;
 
-  @Select(ListState.getRating) rating$: Observable<number>;
-
+  upRating(id) {
+    this.store.dispatch(new GetRatingAction(Number([this.restaurants[id-1]._id])));
+  }
 }

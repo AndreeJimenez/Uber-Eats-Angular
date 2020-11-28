@@ -7,7 +7,7 @@ export interface IRList {
 
 export class GetRatingAction {
   public static type = '[List] Rating';
-  constructor(public rating: String) {}
+  constructor(public rating: number) {}
 }
 
 @State<IRList>({
@@ -28,6 +28,7 @@ export class ListState {
   @Action(GetRatingAction)
   get(state: StateContext<IRList>, action: GetRatingAction) {
     const actualState = state.getState();
-    console.log('click input' + action.rating);
+    var rounded = Math.round((Number(actualState.rating) + 0.1) * 10) / 10
+    state.patchState({ rating: rounded });
   }
 }
