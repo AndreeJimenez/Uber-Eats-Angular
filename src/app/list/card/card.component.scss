@@ -5,12 +5,17 @@
 }
 
 .card {
-  height: 345px;
   cursor: pointer;
   color: #000;
   text-decoration: none;
   list-style: none;
   flex-shrink: 0;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px 24px;
 }
 
 .card .img-section img{
@@ -26,6 +31,10 @@
   color: #ffffff;
   bottom: 20px;
   right: 20px;
+  font-size: 22px;
+}
+.card .img-section i:hover {
+  transform: scale(1.1);
 }
 
 .text-section {
@@ -59,4 +68,19 @@
 .card .category {
   font-size: 12px;
   padding-top: 8px;
+}
+
+
+
+@media screen and (max-width: 900px) {
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr);;
+    gap: 40px 24px;
+  }
+}
+@media screen and (max-width: 520px) {
+  .cards-container {
+    grid-template-columns: 1fr;
+    gap: 40px 24px;
+  }
 }

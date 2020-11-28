@@ -5,7 +5,6 @@ import { ListRoutingModule } from './list-routing.module';
 import { ListTemplateComponent } from './list-template/list-template.component';
 import { CardComponent } from './card/card.component';
 
-
 @NgModule({
   declarations: [ListTemplateComponent, CardComponent],
   imports: [
