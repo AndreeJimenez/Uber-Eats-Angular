@@ -1,6 +1,87 @@
 footer {
-  height: 96px;
   background-color: #000;
   margin-top: 80px;
   padding: 72px 0px 88px;
+  color: #fff;
+  box-sizing: border-box;
+}
+footer a {
+  text-decoration: none;
+  color: #fff;
+}
+p {
+  margin: 0;
+}
+
+.container {
+  padding: 0 80px;
+}
+
+.content, .links-section,
+.final-section, .social-media,
+.copy-right-section, .content .app, .privacy {
+  display: flex;
+}
+
+.content {
+  justify-content: space-between;
+}
+
+.content .app img {
+  width: 135px;
+}
+
+.content .logo-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.logo-section .logo {
+  align-self: flex-start;
+}
+
+.links-section {
+  justify-content: space-between;
+}
+.links-section .text-col:first-child {
+  margin-right: 50px;
+}
+.links-section a {
+  display: block;
+  margin-bottom: 16px;
+}
+.links-section .text-col a:first-child {
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+
+.final-section {
+  justify-content: space-between;
+}
+
+.copy-right-section {
+  flex-direction: column;
+}
+
+.hr-footer {
+  margin: 40px 0;
+  color: #fff;
+}
+
+.app img:first-child {
+  margin-right: 15px;
+}
+
+.social-media {
+  width: 100px;
+  justify-content: space-around;
+}
+
+.privacy {
+  width: 350px;
+  justify-content: space-around;
+}
+.copy-right-section p{
+  text-align: end;
+  line-height: 3;
 }
