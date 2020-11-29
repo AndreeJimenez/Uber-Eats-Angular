@@ -17,7 +17,7 @@ p {
   padding: 0 80px;
 }
 
-.content, .links-section,
+.content,
 .final-section, .social-media,
 .copy-right-section, .content .app, .privacy {
   display: flex;
@@ -35,22 +35,23 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  flex: 2;
 }
 .logo-section .logo {
   align-self: flex-start;
 }
 
-.links-section {
-  justify-content: space-between;
+.content .text-col {
+  flex: 1;
 }
-.links-section .text-col:first-child {
+.content .text-col:first-child {
   margin-right: 50px;
 }
-.links-section a {
+.content a {
   display: block;
   margin-bottom: 16px;
 }
-.links-section .text-col a:first-child {
+.content .text-col a:first-child {
   font-weight: bold;
   margin-bottom: 24px;
 }
@@ -88,8 +89,9 @@ p {
 
 
 @media screen and (max-width: 900px) {
-  .content {
-    display: block;
+
+  .content .logo-section {
+    flex: 1;
   }
   .content .logo-section {
     margin-bottom: 30px;
@@ -103,7 +105,7 @@ p {
   .content {
     display: block;
   }
-  .content .links-section {
+  .content {
     display: block;
   }
   
