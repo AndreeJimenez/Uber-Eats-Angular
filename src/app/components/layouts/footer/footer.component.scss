@@ -85,3 +85,43 @@ p {
   text-align: end;
   line-height: 3;
 }
+
+
+@media screen and (max-width: 900px) {
+  .content {
+    display: block;
+  }
+  .content .logo-section {
+    margin-bottom: 30px;
+  }
+  .content .logo-section .app {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 635px) {
+  .content {
+    display: block;
+  }
+  .content .links-section {
+    display: block;
+  }
+  
+  .content .logo-section {
+    margin-bottom: 30px;
+  }
+  .content .logo-section .app {
+    display: none;
+  }
+  .final-section {
+    display: block;
+  }
+  .final-section .copy-right-section a {
+    margin-top: 10px;
+    display: block;
+  }
+  .final-section .privacy {
+    margin-top: 10px;
+    display: block;
+  }
+}
